@@ -16,7 +16,7 @@ class PatientFactory extends Object
 {
 	private Patient get (final Character healthStatus)
 	{
-		final Map<Character, Supplier<? extends Patient>> codeForPatientTypeMapping = new HashMap<>();
+		final Map<? super Character, Supplier<? extends Patient>> codeForPatientTypeMapping = new HashMap<>();
 		
 		codeForPatientTypeMapping.put('H', HealthyPatient::new);
 		codeForPatientTypeMapping.put('F', FeveredPatient::new);
